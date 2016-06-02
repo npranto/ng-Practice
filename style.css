@@ -1,0 +1,54 @@
+body{
+	background-color: lightgreen;
+}
+body input{
+	padding: 10px;
+	border-radius: 10px;
+	border: 3px solid gray;
+	font-size: 20px;
+}
+.text-box button{
+	padding: 10px;
+	border-radius: 10px;
+	border: 3px solid gray;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+}
+.filter p{
+	color: gray;
+	font-size: 20px;
+}
+.sort span{
+	color: gray;
+	font-size: 20px;
+}
+.profile{
+	overflow: auto;
+	margin-top: 20px;
+	background-color: lightgray;
+	border: 5px solid yellow;
+}
+.user{
+	margin: 20px;
+	background-color: green;
+}
+.bold{
+	color: pink;
+	font-weight: bold;
+}
+.profile p{
+	color: white;
+	text-align: left;
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+.button{
+	padding: 10px;
+	border-radius: 10px;
+	border: 3px solid gray;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>ng-Practice</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="mainCtrl">
+	<div class="text-box">
+		<input type="text" placeholder="Name" ng-model="name">
+		<input type="text" placeholder="City" ng-model="city">
+		<input type="text" placeholder="State" ng-model="state">
+		<input type="text" placeholder="Age" ng-model="age">
+		<input type="text" placeholder="Gender" ng-model="gender">
+		<button ng-click="addUser()">ADD</button>
+	</div>
+	<div class="filter">
+		<p>Filter: <input type="text" ng-model="filterText"></p>	
+	</div>
+	<div class="sort">
+		<span>Sort:</span>
+		<select ng-model="sort">
+			<option value="city">City</option>
+			<option value="state">State</option>
+			<option value="age">age</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select>	
+	</div>
+	
+	<div class="profile">
+		<div ng-repeat="user in users | filter: filterText | orderBy: sort track by $index" class="user">
+			<p><span class="bold">Name:</span> {{user.name}}</p>
+			<p><span class="bold">City:</span> {{user.city}}</p>
+			<p><span class="bold">State:</span> {{user.state}}</p>
+			<p><span class="bold">Age:</span> {{user.age}}</p>
+			<p><span class="bold">Gender:</span> {{user.gender}}</p>
+			<button class="button" ng-click="deleteUser($index)"> DELETE</button>
+		</div>
+	</div>
+	
+
+
+
+<!-- Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./js/mainCtrl.js"></script>
+	<script src="./js/service.js"></script>
+
+
+</body>
+</html>
